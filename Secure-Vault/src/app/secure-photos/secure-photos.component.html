@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+<div class="container" >
+    <header class="pb-3">{{title}}</header>
+    <div class="card row p-1 m-1 cardscss brcss"  *ngFor="let image of imageList" (scroll)="onWindowScroll()"> 
+        <div class="row col-12">
+            <div class="col-2 p-0"> <img  [src]="image.thumbnailUrl" height="80px" width="80px" class="brcss"></div>
+            <div class="col-10 p-0">
+                <div class="row p-0">
+                    <div class="col-10 p-0">
+                        <p>{{image.title}}</p>
+                        <p class="colorp">Album {{image.albumId}}</p>
+                    </div>
+                    <div class="col-2">
+                        <button type="button" class="btn btn-link" (click)="onDelete(image)"><span class="bi bi-trash black-color"></span></button>
+                    </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
